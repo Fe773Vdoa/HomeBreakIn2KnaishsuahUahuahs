@@ -1,0 +1,87 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+--- Window
+
+local Library = DarkraiX:Window("Harlen Hub","","",Enum.KeyCode.RightControl);
+
+--- Botão
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fe773Vdoa/ButtonIJheushauuaya7Ha7auuahd-s/main/ButtonIahhwuaha7wg7wyee8"))()
+
+--- Tabs
+
+Tab1 = Library:Tab("🚪┃Main")
+
+--- Section
+
+Tab1:Label("Brazilian Script By Harlen_Br0")
+
+--- Botões
+
+Tab1:Line()
+
+Tab1:Seperator("📍 = Teleport = 📍")
+
+Tab1:Button("🛻 • Truck",function()
+    local plr = game.Players.LocalPlayer
+local plrRP = plr.Character:FindFirstChild("HumanoidRootPart")
+if plrRP then
+  TweenSpeed = 200
+  TweenPos = CFrame.new(86.90481567382812, 7.110655307769775, 144.49615478515625)
+  -- ///////////////////////////// --
+  local distance = (plrRP.Position - TweenPos.p).Magnitude
+  local duration = distance / TweenSpeed
+  local tween = game:GetService("TweenService"):Create(plrRP, TweenInfo.new(duration), {CFrame = TweenPos})
+  tween:Play()
+  tween.Completed:Wait()
+end
+end)
+
+Tab1:Seperator("👩 = Adult Roles = 🧑")
+
+Tab1:Button("🛡️ • The Protector",function()
+    local args = {
+    [1] = "Bat",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("MakeRole"):FireServer(unpack(args))
+end)
+
+Tab1:Button("🩺 • The Medic",function()
+    local args = {
+    [1] = "MedKit",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("MakeRole"):FireServer(unpack(args))
+end)
+
+Tab1:Seperator("👦 = Kid Roles = 👧")
+
+Tab1:Button("🍭 • The Hyper",function()
+    local args = {
+    [1] = "Lollipop",
+    [2] = true,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("MakeRole"):FireServer(unpack(args))
+end)
+
+Tab1:Button("🍶 • The Sporty",function()
+    local args = {
+    [1] = "Bottle",
+    [2] = true,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("MakeRole"):FireServer(unpack(args))
+end)
+
+Tab1:Line()
+
+--[[
+]]
