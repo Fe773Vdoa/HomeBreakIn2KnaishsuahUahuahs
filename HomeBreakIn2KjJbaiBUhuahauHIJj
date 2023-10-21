@@ -102,7 +102,11 @@ Tab2:Line()
 
 Tab2:Seperator("💳 = Credits = 💳")
 
+Tab2:Label("Credits To Harlen")
+
 Tab2:Label("Credits To REDz")
+
+Tab2:Label("Credits To Gb")
 
 Tab2:Line()
 
