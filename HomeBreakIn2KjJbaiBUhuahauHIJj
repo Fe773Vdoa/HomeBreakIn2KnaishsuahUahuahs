@@ -11,7 +11,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Fe773Vdoa/ButtonIJheu
 --- Tabs
 
 Tab1 = Library:Tab("🚪┃Main")
-
+Tab2 = Library:Tab("💳┃Credits")
 --- Section
 
 Tab1:Label("Brazilian Script By Harlen_Br0")
@@ -97,6 +97,14 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("
 end)
 
 Tab1:Line()
+
+Tab2:Line()
+
+Tab2:Seperator("💳 = Credits = 💳")
+
+Tab2:Label("Credits To REDz")
+
+Tab2:Line()
 
 --[[
 ]]
