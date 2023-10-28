@@ -11,7 +11,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Fe773Vdoa/ButtonIJheu
 --- Tabs
 
 Tab1 = Library:Tab("🚪┃Main")
-Tab2 = Library:Tab("💳┃Credits")
+Tab4 = Library:Tab("🎯┃Misc")
+Tab5 = Library:Tab("💳┃Credits")
+
 --- Section
 
 Tab1:Label("Brazilian Script By Harlen_Br0")
@@ -98,17 +100,68 @@ end)
 
 Tab1:Line()
 
-Tab2:Line()
+Tab4:Line()
 
-Tab2:Seperator("💳 = Credits = 💳")
+Tab4:Seperator("🎯 = Misc = 🎯")
 
-Tab2:Label("Credits To Harlen")
+Tab4:Label("The Normal Speed This 16")
 
-Tab2:Label("Credits To REDz")
+Tab4:Slider("🏃 • Speed",1,150,16,function(value)
+        local player = game.Players.LocalPlayer
+local humanoid = player.Character.Humanoid
 
-Tab2:Label("Credits To Gb")
+humanoid.WalkSpeed = value
+    end)
 
-Tab2:Line()
+Tab4:Button("👻 • Noclip",function()
+    local function onPartTouched(part)
+  
+  local humanoid = part.Parent:FindFirstChild("Humanoid")
+  if humanoid ~= nil then
+    
+    part.CanCollide = false
+  end
+end
+
+for _, part in ipairs(workspace:GetDescendants()) do
+  if part:IsA("BasePart") then
+    part.Touched:Connect(onPartTouched)
+  end
+end
+end)
+
+Tab4:Button("🦘 • Infinite Jumps",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Fe773Vdoa/SuHusYfY-eG6Tay6GWYAU38LuckyBlocky/main/InfiniteJump"))()
+end)
+
+Tab4:Button("💡 • Fullbright",function()
+    local function setBrightness()
+    
+    local lighting = game:GetService("Lighting")
+    
+    
+    lighting.Ambient = Color3.new(1, 1, 1)
+    
+    
+    lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+end
+
+setBrightness()
+end)
+
+Tab4:Line()
+
+Tab5:Line()
+
+Tab5:Seperator("💳 = Credits = 💳")
+
+Tab5:Label("Credits To Harlen")
+
+Tab5:Label("Credits To REDz")
+
+Tab5:Label("Credits To Gb")
+
+Tab5:Line()
 
 --[[
 ]]
