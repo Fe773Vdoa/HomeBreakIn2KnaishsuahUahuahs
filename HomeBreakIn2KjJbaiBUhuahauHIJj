@@ -56,11 +56,11 @@ end)
 
 Tab1:Seperator("💵 = Free Gamepass Roles = 💵")
 
-Tab4:Button("👨‍💻 • The Hacker <FREE>",function()
+Tab1:Button("👨‍💻 • The Hacker <FREE>",function()
     game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer("Phone", true, false)
 end)
 
-Tab4:Button("🤓 • The Nerd <FREE>",function()
+Tab1:Button("🤓 • The Nerd <FREE>",function()
     game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer("Book", true, false)
 end)
 
